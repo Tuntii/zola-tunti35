@@ -1,0 +1,21 @@
+@use "badges";
+@use "games";
+@use "header";
+@use "polaroid";
+@use "rizz";
+@use "shy";
+@use "window";
+
+#noscript {
+	text-align: center;
+
+	img {
+		margin-block-start: 0;
+		width: 4rem;
+		height: 4rem;
+	}
+}
+
+#abyss {
+	filter: blur(0.25rem);
+}

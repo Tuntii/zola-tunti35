@@ -1,0 +1,42 @@
+// Who's shy?
+#shy {
+	appearance: none;
+	transition: var(--transition);
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	color: inherit;
+	font-style: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-thickness: max(1px, 0.0625em);
+
+	&:hover {
+		text-decoration-style: solid;
+	}
+
+	&:disabled {
+		opacity: var(--disabled-opacity);
+		cursor: not-allowed;
+	}
+}
+
+// Ah, that's who
+#fluttershy {
+	position: fixed;
+	transform: translateY(100%);
+	animation: peek var(--transition-long);
+	margin: 0;
+	inset-block-end: 0;
+	inset-inline-end: calc((100vw - min(var(--container-width), 90%)) / 2);
+
+	@keyframes peek {
+		50%,
+		75% {
+			transform: translateY(0);
+		}
+	}
+}
